@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encryptid Offline Finals</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Enter Password</h1>
+    <p>To unlock this level, you first need the password. Tell me what you got from the last step.</p>
+    <% if (error) { %><p class="error"><%= error %></p><% } %>
+    <form method="POST" action="/login">
+      <input type="password" name="password" placeholder="Password" autofocus>
+      <button type="submit">Enter the vault</button>
+    </form>
+  </div>
+</body>
+</html>

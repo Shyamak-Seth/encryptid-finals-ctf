@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encryptid Offline Finals &mdash; Level</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/index.js"></script>
+</head>
+<body>
+  <!-- Part 1/4: encryptid{shy4mp -->
+  <div class="card">
+    <h1>Greetings, hunter.</h1>
+    <p>To get through my life story, you first need to go through my safe.</p>
+    <p class="hint">I have split the passcode of my safe into different parts. Find them on this website and enter the passcode below.</p>
+    <form method="POST" action="/submit">
+      <input type="text" name="flag" placeholder="encryptid{...}" autocomplete="off">
+      <button type="submit">Submit flag</button>
+    </form>
+    <% if (typeof correct !== 'undefined') { %>
+      <% if (correct) { %>
+        <p class="good">Correct! Now say this to the hunt masters exactly, word by word, and follow their instructions after doing so:</p>
+        <blockquote>Chandu ke chaacha ne chandu ki chaachi ko chaandni raat me chaandni chowk me chandi ke chammach se chutney chatai</blockquote>
+      <% } else { %>
+        <p class="error">Nope. Keep digging.</p>
+      <% } %>
+    <% } %>
+  </div>
+</body>
+</html>
